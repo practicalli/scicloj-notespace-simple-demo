@@ -1,50 +1,27 @@
-# notespace-demo
+# A very simple notespace-demo
+Notespace is a journal library for Clojure, that is really easy to use.
 
-FIXME: my new application.
+This is a project with simple examples and also launches an empty notespace webpage on REPL startup.
 
-## Installation
+* [Project Repository on GitHub ](https://github.com/practicalli/notespace-demo)
 
-Download from https://github.com/practicalli/notespace-demo
+## Developing the project
+Start a REPL for the project with Leiningen or Clojure CLI tools (version 1.10.1.697 or greater)
 
-## Usage
+```
+lein repl
 
-FIXME: explanation
+clojure -M:env/dev
+```
 
-Run the project directly:
+Run the project tests (when they are added)
+```
+lein repl
 
-    $ clojure -M -m practicalli.notespace-demo
-
-Run the project's tests (they'll fail until you edit them):
-
-    $ clojure -M:test:runner
-
-Build an uberjar:
-
-    $ clojure -M:uberjar
-
-Run that uberjar:
-
-    $ java -jar notespace-demo.jar
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+clojure -M:test:runner
+```
 
 ## License
-
 Copyright © 2020 Practicalli
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Creative Commons Attribution Share-Alike 4.0 International

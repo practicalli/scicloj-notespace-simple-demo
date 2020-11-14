@@ -13,6 +13,9 @@
   ;; Update the notespace with current line
   (notespace/eval-and-realize-note-at-line 26)
 
+  ;; Generate static web page from current namespace
+  (notespace/render-static-html "index.html")
+
   ;; Listen for changes in the namespace and update notespace automatically
   ;; NOTE not currently available, check next version of notespace
   (notespace/listen)
@@ -37,6 +40,7 @@
 [:h1 "I am a secret, so you cannot see me"]
 
 
+;; simple values
 (rand)
 
 [34388]
