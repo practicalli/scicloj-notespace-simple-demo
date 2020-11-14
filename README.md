@@ -3,7 +3,7 @@ Notespace is a journal library for Clojure, that is really easy to use.
 
 This is a project with simple examples and also launches an empty notespace webpage on REPL startup.
 
-* [Project Repository on GitHub ](https://github.com/practicalli/notespace-demo)
+* [Project Repository on GitHub ](https://github.com/practicalli/scicloj-notespace-simple-demo)
 
 ## Developing the project
 Start a REPL for the project with Leiningen or Clojure CLI tools (version 1.10.1.697 or greater)
