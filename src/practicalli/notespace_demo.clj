@@ -10,9 +10,11 @@
   ;; Update the notespace with current namespace
   (notespace/eval-this-notespace)
 
+  ;; Update the notespace with current line
   (notespace/eval-and-realize-note-at-line 26)
 
   ;; Listen for changes in the namespace and update notespace automatically
+  ;; NOTE not currently available, check next version of notespace
   (notespace/listen)
   )
 
