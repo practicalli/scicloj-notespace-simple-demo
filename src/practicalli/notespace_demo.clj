@@ -31,12 +31,13 @@
       (map (fn [i] [:h1 i])
            (into [:div])))]
 
+^kind/void
+[:h1 "I am a secret, so you cannot see me"]
+
 
 (rand)
 
 [34388]
-
-
 
 ;; Rich comment block with redefined vars ignored
 #_{:clj-kondo/ignore [:redefined-var]}
