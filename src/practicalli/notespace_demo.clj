@@ -16,14 +16,13 @@
   (notespace/listen)
   )
 
-(comment
-  ;;simple code
-  (defn simple
-    [arg]
-    (* arg 9))
+ ;;simple code
+ (defn simple
+   [arg]
+   (* arg 9))
 
-  (simple 11)
-  ) ;; End of rich comment block
+(simple 11)
+;; End of rich comment block
 
 
 ^kind/hiccup
