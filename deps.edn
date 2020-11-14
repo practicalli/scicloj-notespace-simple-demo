@@ -6,7 +6,11 @@
   scicloj/tablecloth  {:mvn/version "5.00-beta-2"}}
 
  :aliases
- {:test
+ {
+  :env/dev
+  {:extra-paths ["dev"]}
+
+  :env/test
   {:extra-paths ["test"]
    :extra-deps  {org.clojure/test.check {:mvn/version "1.0.0"}}}
 
