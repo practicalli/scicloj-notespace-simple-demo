@@ -2,7 +2,7 @@
 
  :deps
  {org.clojure/clojure {:mvn/version "1.10.1"}
-  scicloj/notespace   {:mvn/version "3-alpha2"}
+  scicloj/notespace   {:mvn/version "3-alpha3-SNAPSHOT"}
   scicloj/tablecloth  {:mvn/version "5.00-beta-2"}}
 
  :aliases
