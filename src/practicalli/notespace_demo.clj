@@ -1,9 +1,87 @@
 (ns practicalli.notespace-demo
-  (:gen-class)
   (:require [notespace.api :as notespace]
-            [notespace.kinds :as kind]))
+            [notespace.kinds :as kind]
+            [portal.api :as inspect]))
+
+;; Notespace
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Listen for changes in the namespace and update notespace automatically
+^kind/hidden
+(comment
+  (notespace/listen)
+  )
+
+
+;; Notespace examples
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Full details at:
+;; https://scicloj.github.io/notespace/doc/notespace/v3-experiment1-test/index.html
+
+
+;; simple values
+
+^kind/hiccup-nocode
+[:h2 "Simple values"]
+
+(rand)
+
+[34388]
+
+^kind/hiccup-nocode
+[:h2 "Simple code"]
+
+(defn simple
+  [arg]
+  (* arg 9))
+
+(simple 11)
+
+
+^kind/hiccup-nocode
+[:h2 "Generative code"]
+
+
+^kind/hiccup
+[:div
+ (->> (range 9)
+      (map (fn [i] [:h1 i])
+           (into [:div])))]
+
+
+^kind/hiccup-nocode
+[:h2 "Hidden evaluation"]
+
+^kind/void
+[:h1 "Hide my evaluation result. Am I even evaluated?"]
+
+
+
+;; Inspect values with Portal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+^kind/hiccup-nocode
+[:div
+ [:h2 "Inspect data with Portal"]
+ [:p "Wrap values and code with tap> and evaluate to send to Portal"]]
+
+
+^kind/hiccup-nocode
+[:p "Weather forcast"]
+
+(tap>
+  (zipmap [:monday :tuesday :wednesday :thursday :friday :saturday :sunday]
+          (range 10 20)))
+
+
+
 
 (comment
+
+  ;; Notespace helpers
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; These function must be kept in a comment block
+  ;; or they will disrupt the evaluation of the notespace
+
   (notespace/init)
   (notespace/init-with-browser)
 
@@ -17,40 +95,20 @@
   (notespace/render-static-html "index.html")
 
   ;; Listen for changes in the namespace and update notespace automatically
-  ;; NOTE not currently available, check next version of notespace
   (notespace/listen)
-  )
 
- ;;simple code
- (defn simple
-   [arg]
-   (* arg 9))
+  (notespace/check)
 
-(simple 11)
-;; End of rich comment block
+  ;; Portal helpers
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;; Clear the Portal window
+  (inspect/clear)
 
-^kind/hiccup
-[:div
- (->> (range 9)
-      (map (fn [i] [:h1 i])
-           (into [:div])))]
+  ;; Close the Portal window
+  (inspect/close)
 
-^kind/void
-[:h1 "I am a secret, so you cannot see me"]
-
-
-;; simple values
-(rand)
-
-[34388]
-
-;; Rich comment block with redefined vars ignored
-#_{:clj-kondo/ignore [:redefined-var]}
-(comment
-  (defn -main
-    "I don't do a whole lot ... yet."
-    [& args]
-    (println "Hello, World!"))
+  ;; Open Portal window with solarized-dark theme
+  (inspect/open {:portal.colors/theme :portal.colors/solarized-light})
 
   ) ;; End of rich comment block
