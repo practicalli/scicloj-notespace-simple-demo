@@ -44,8 +44,8 @@
 ^kind/hiccup
 [:div
  (->> (range 9)
-      (map (fn [i] [:h1 i])
-           (into [:div])))]
+      (map (fn [i] [:h1 i]))
+      (into [:div]))]
 
 
 ^kind/hiccup-nocode
