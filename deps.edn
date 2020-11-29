@@ -3,7 +3,8 @@
  :deps
  {org.clojure/clojure {:mvn/version "1.10.1"}
   scicloj/notespace   {:mvn/version "3-alpha3-SNAPSHOT"}
-  scicloj/tablecloth  {:mvn/version "5.00-beta-2"}}
+  scicloj/tablecloth  {:mvn/version "5.00-beta-2"}
+  djblue/portal {:mvn/version "0.6.4"}}
 
  :aliases
  {
