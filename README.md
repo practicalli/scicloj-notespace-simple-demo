@@ -10,7 +10,7 @@ Start a REPL for the project with Leiningen or Clojure CLI tools (version 1.10.1
 ```
 lein repl
 
-clojure -M:env/dev:inspect/portal
+clojure -M:env/dev:inspect/portal-clj
 ```
 
 Wait a few seconds for the Portal and Notespace pages to load into your browser.
