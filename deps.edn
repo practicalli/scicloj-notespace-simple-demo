@@ -21,6 +21,7 @@
    :main-opts  ["-m" "cognitect.test-runner"
                 "-d" "test"]}
 
-  :uberjar {:extra-deps {seancorfield/depstar {:mvn/version "1.1.126"}}
-            :main-opts  ["-m" "hf.depstar.uberjar" "notespace-demo.jar"
-                         "-C" "-m" "practicalli.notespace-demo"]}}}
+  :uberjar
+  {:extra-deps {seancorfield/depstar {:mvn/version "1.1.126"}}
+   :main-opts  ["-m" "hf.depstar.uberjar" "notespace-demo.jar"
+                "-C" "-m" "practicalli.notespace-demo"]}}}
