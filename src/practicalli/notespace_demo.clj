@@ -1,7 +1,6 @@
 (ns practicalli.notespace-demo
   (:require [notespace.api :as notespace]
-            [notespace.kinds :as kind]
-            [portal.api :as inspect]))
+            [notespace.kinds :as kind]))
 
 ;; Notespace
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
