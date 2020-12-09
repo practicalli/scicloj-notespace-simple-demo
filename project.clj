@@ -7,5 +7,4 @@
                  [scicloj/notespace "3-alpha3-SNAPSHOT"]]
   :main ^:skip-aot practicalli.notespace-demo
   :target-path "target/%s"
-  :profiles {:dev     {:dependencies [[djblue/portal "0.6.4"]]}
-             :uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}})
