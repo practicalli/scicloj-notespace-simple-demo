@@ -1,1 +1,1 @@
-((clojure-mode . ((cider-clojure-cli-global-options . "-M:env/dev:inspect/portal-cli"))))
+((clojure-mode . ((cider-clojure-cli-aliases . "-M:env/dev:inspect/portal-cli"))))
